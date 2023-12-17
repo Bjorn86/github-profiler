@@ -1,0 +1,23 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.switcher {
+  width: 86px;
+  padding: 7px;
+  box-sizing: border-box;
+  border: none;
+  background:
+    url('../../../../shared/ui/assets/icons/icon-moon.svg') 64px center/20px
+      no-repeat,
+    transparent;
+  @include font-main($textXS, $color-grey, 700);
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include hover;
+}
+
+.switcherDark {
+  background-image: url('../../../../shared/ui/assets/icons/icon-sun.svg');
+  color: $color-blue;
+}

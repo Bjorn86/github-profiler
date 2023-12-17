@@ -1,0 +1,27 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.header {
+  max-width: $base-width;
+  width: 100%;
+  margin: 48px auto 35px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @media (max-width: 410px) {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+}
+
+.title {
+  margin: 0;
+  @include font-main($textL, $color-dark-grey, 700);
+}
+
+.titleDark {
+  color: $color-white;
+}

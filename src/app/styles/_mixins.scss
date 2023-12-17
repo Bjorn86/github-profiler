@@ -1,9 +1,11 @@
 @mixin font-main($size, $color, $weight, $lh: normal, $ls: normal) {
   font: {
-    family: 'Inter', Helvetica, Arial, sans-serif;
+    family: 'Space Mono', Helvetica, Arial, sans-serif;
     size: $size;
     weight: $weight;
   }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: $color;
   @if $lh {
     line-height: $lh;
@@ -18,4 +20,8 @@
   &:hover {
     opacity: 0.7;
   }
+}
+
+@mixin shadow {
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }

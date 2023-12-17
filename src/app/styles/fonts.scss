@@ -1,9 +1,19 @@
 @font-face {
-  font-family: Inter;
+  font-family: 'Space Mono';
   font-display: swap;
   src:
-    url('../../shared/ui/assets/fonts/Inter-Regular.woff2') format('woff2'),
-    url('../../shared/ui/assets/fonts/Inter-Regular.woff') format('woff');
+    url('../../shared/ui/assets/fonts/SpaceMono-Regular.woff2') format('woff2'),
+    url('../../shared/ui/assets/fonts/SpaceMono-Regular.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-display: swap;
+  src:
+    url('../../shared/ui/assets/fonts/SpaceMono-Bold.woff2') format('woff2'),
+    url('../../shared/ui/assets/fonts/SpaceMono-Bold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
 }

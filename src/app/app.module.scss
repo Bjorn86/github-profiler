@@ -1,10 +1,15 @@
 @import 'src/app/styles/mixins';
 @import 'src/app/styles/variables';
 
-.container {
+.app {
   max-width: 100vw;
   min-height: 100vh;
   min-width: 375px;
   display: flex;
   flex-direction: column;
+  background-color: $color-light-grey;
+}
+
+.appDark {
+  background-color: $color-very-dark-blue;
 }
