@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import clsx from 'clsx';
 
+import { Search } from 'features/search';
 import { Header } from 'widgets/header';
 import { withProviders } from './providers';
 import { ThemeContext } from './contexts';
@@ -14,6 +15,9 @@ function App() {
   return (
     <div className={clsx(s.app, { [s.appDark]: theme === 'dark' })}>
       <Header />
+      <main className={s.main}>
+        <Search isLoading={false} onSubmit={() => {}} />
+      </main>
     </div>
   );
 }

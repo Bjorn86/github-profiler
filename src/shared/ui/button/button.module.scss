@@ -1,0 +1,39 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.button {
+  border: none;
+  cursor: pointer;
+  @include hover;
+}
+
+.filled {
+  width: 107px;
+  padding: 14px;
+  border-radius: 10px;
+  @include font-main($textS, $color-white, 700);
+  background-color: $color-light-blue;
+
+  @media screen and (max-width: 580px) {
+    width: 87px;
+    padding: 12px;
+    font-size: $textXS;
+  }
+}
+
+.transparent {
+  width: 86px;
+  padding: 7px;
+  box-sizing: border-box;
+  background:
+    url('../assets/icons/icon-moon.svg') 64px center/20px no-repeat,
+    transparent;
+  @include font-main($textXS, $color-grey, 700);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.transparentDark {
+  background-image: url('../assets/icons/icon-sun.svg');
+  color: $color-blue;
+}

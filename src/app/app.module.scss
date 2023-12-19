@@ -13,3 +13,18 @@
 .appDark {
   background-color: $color-very-dark-blue;
 }
+
+.main {
+  max-width: $base-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 410px) {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+}

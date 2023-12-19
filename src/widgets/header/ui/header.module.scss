@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  @media (max-width: 410px) {
+  @media screen and (max-width: 410px) {
     padding-right: 28px;
     padding-left: 28px;
   }

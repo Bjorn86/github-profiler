@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import clsx from 'clsx';
 
 import { ThemeSwitcher } from 'features/theme/theme-switcher';
-import { ThemeContext } from 'app/contexts/theme';
+import { ThemeContext } from 'app/contexts';
 
 import s from './header.module.scss';
 
