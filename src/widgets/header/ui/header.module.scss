@@ -19,7 +19,7 @@
 
 .title {
   margin: 0;
-  @include font-main($textL, $color-dark-grey, 700);
+  @include font-main(27px, $color-dark-grey, 700);
 }
 
 .titleDark {

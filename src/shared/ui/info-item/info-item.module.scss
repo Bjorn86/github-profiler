@@ -1,0 +1,66 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.wrapper {
+  max-width: 45%;
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  svg {
+    flex-shrink: 0;
+    margin-right: 13px;
+    fill: $color-blue;
+  }
+
+  @media screen and (max-width: 580px) {
+    max-width: 100%;
+  }
+}
+
+.wrapperDark {
+  svg {
+    fill: $color-white;
+  }
+}
+
+.wrapperEmpty {
+  svg {
+    fill: $color-grey;
+  }
+}
+
+.link {
+  width: 100%;
+  @include font-main(16px, $color-blue, 400);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  @include hover;
+}
+
+.linkDark {
+  color: $color-white;
+}
+
+.linkEmpty {
+  color: $color-grey;
+}
+
+.text {
+  width: 100%;
+  @include font-main(16px, $color-blue, 400);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.textDark {
+  color: $color-white;
+}
+
+.textEmpty {
+  color: $color-grey;
+}

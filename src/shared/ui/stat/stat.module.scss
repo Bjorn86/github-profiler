@@ -1,0 +1,37 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.stat {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 580px) {
+    align-items: center;
+  }
+}
+
+.title {
+  margin: 0;
+  @include font-main(14px, $color-grey, 400);
+
+  @media screen and (max-width: 580px) {
+    font-size: 12px;
+  }
+}
+
+.titleDark {
+  color: $color-white;
+}
+
+.value {
+  margin: 0;
+  @include font-main(22px, $color-dark-grey, 700);
+
+  @media screen and (max-width: 580px) {
+    font-size: 16px;
+  }
+}
+
+.valueDark {
+  color: $color-white;
+}

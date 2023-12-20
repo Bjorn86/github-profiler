@@ -11,13 +11,13 @@
   width: 107px;
   padding: 14px;
   border-radius: 10px;
-  @include font-main($textS, $color-white, 700);
+  @include font-main(16px, $color-white, 700);
   background-color: $color-light-blue;
 
   @media screen and (max-width: 580px) {
     width: 87px;
     padding: 12px;
-    font-size: $textXS;
+    font-size: 14px;
   }
 }
 
@@ -28,7 +28,7 @@
   background:
     url('../assets/icons/icon-moon.svg') 64px center/20px no-repeat,
     transparent;
-  @include font-main($textXS, $color-grey, 700);
+  @include font-main(14px, $color-grey, 700);
   text-align: left;
   text-transform: uppercase;
 }

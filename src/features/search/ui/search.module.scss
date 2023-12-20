@@ -12,7 +12,7 @@
   padding: 24px 128px 25px 67px;
   border: none;
   border-radius: 15px;
-  @include font-main($textM, $color-dark-grey, 400);
+  @include font-main(18px, $color-blue, 400);
   background:
     url('../../../shared/ui/assets/icons/icon-search.svg') 14px center/ 25px
       no-repeat,
@@ -20,7 +20,7 @@
   @include shadow;
 
   &::placeholder {
-    color: $color-dark-grey;
+    color: $color-blue;
   }
 
   &[type='search']::-webkit-search-cancel-button {
@@ -35,7 +35,7 @@
   @media screen and (max-width: 580px) {
     padding: 22px 104px 20px 48px;
     background-position: 10px center;
-    font-size: $textXXS;
+    font-size: 13px;
   }
 }
 

@@ -1,0 +1,20 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.list {
+  grid-area: info;
+  max-width: 100%;
+  margin: 27px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 10px;
+  list-style: none;
+
+  @media screen and (max-width: 910px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 0;
+  }
+}

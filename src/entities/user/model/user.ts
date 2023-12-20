@@ -1,14 +1,13 @@
 export type User = {
   login: string;
-  id: number;
-  avatarUrl: string;
+  avatarUrl: string | null;
   pageUrl: string;
   name: string;
-  company: string;
-  blog: string;
-  location: string;
-  bio: string;
-  twitterUrl: string;
+  company: string | null;
+  blog: string | null;
+  location: string | null;
+  bio: string | null;
+  twitterUrl: string | null;
   repos: number;
   followers: number;
   following: number;
@@ -17,15 +16,14 @@ export type User = {
 
 export type GithubUser = {
   login: string;
-  id: number;
-  avatar_url: string;
+  avatar_url: string | null;
   html_url: string;
   name: string;
-  company: string;
-  blog: string;
-  location: string;
-  bio: string;
-  twitter_username: string;
+  company: string | null;
+  blog: string | null;
+  location: string | null;
+  bio: string | null;
+  twitter_username: string | null;
   public_repos: number;
   followers: number;
   following: number;

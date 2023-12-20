@@ -1,10 +1,13 @@
 import { useContext } from 'react';
 import clsx from 'clsx';
 
+import { UserCard } from 'widgets/user-card';
 import { Search } from 'features/search';
 import { Header } from 'widgets/header';
 import { withProviders } from './providers';
 import { ThemeContext } from './contexts';
+// TEMP
+import { defaultUser } from '../mock';
 
 import s from './app.module.scss';
 import './index.scss';
@@ -17,6 +20,7 @@ function App() {
       <Header />
       <main className={s.main}>
         <Search isLoading={false} onSubmit={() => {}} />
+        <UserCard {...defaultUser} />
       </main>
     </div>
   );

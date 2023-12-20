@@ -1,0 +1,71 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.wrapper {
+  grid-area: title;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    'title date'
+    'link link';
+  align-items: baseline;
+  column-gap: 10px;
+
+  @media screen and (max-width: 910px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'title'
+      'link'
+      'date';
+    align-content: flex-start;
+    row-gap: 2px;
+  }
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  @include font-main(26px, $color-dark-grey, 700);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @media screen and (max-width: 580px) {
+    font-size: 16px;
+  }
+}
+
+.titleDark {
+  color: $color-white;
+}
+
+.date {
+  grid-area: date;
+  margin: 0;
+  @include font-main(15px, $color-grey, 400);
+  text-align: right;
+
+  @media screen and (max-width: 910px) {
+    text-align: left;
+  }
+
+  @media screen and (max-width: 580px) {
+    font-size: 14px;
+  }
+}
+
+.dateDark {
+  color: $color-white;
+}
+
+.link {
+  grid-area: link;
+  width: max-content;
+  @include font-main(15px, $color-light-blue, 400);
+  text-decoration: none;
+  @include hover;
+
+  @media screen and (max-width: 580px) {
+    font-size: 14px;
+  }
+}

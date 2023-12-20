@@ -1,0 +1,67 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.card {
+  max-width: 100%;
+  padding: 40px 42px 24px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-template-areas:
+    'avatar title'
+    'avatar bio'
+    '. stat'
+    '. info';
+  column-gap: 39px;
+  background-color: $color-white;
+  @include shadow;
+
+  @media screen and (max-width: 910px) {
+    grid-template-areas:
+      'avatar title'
+      'bio bio'
+      'stat stat'
+      'info info';
+  }
+
+  @media screen and (max-width: 580px) {
+    padding-top: 32px;
+    padding-right: 26px;
+    padding-left: 26px;
+    grid-template-columns: 70px 1fr;
+    column-gap: 19px;
+  }
+}
+
+.cardDark {
+  background-color: $color-dark-blue;
+  box-shadow: unset;
+}
+
+.avatar {
+  grid-area: avatar;
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.bio {
+  grid-area: bio;
+  margin: 33px 0 31px;
+  @include font-main(16px, $color-grey, 400);
+
+  @media screen and (max-width: 910px) {
+    margin-top: 28px;
+    margin-bottom: 26px;
+  }
+
+  @media screen and (max-width: 580px) {
+    margin-top: 25px;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+}
+
+.bioDark {
+  color: $color-white;
+}

@@ -1,0 +1,20 @@
+@import 'src/app/styles/mixins';
+@import 'src/app/styles/variables';
+
+.stat {
+  grid-area: stat;
+  max-width: 100%;
+  padding: 16px 33px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  background-color: $color-light-grey;
+
+  @media screen and (max-width: 580px) {
+    padding: 16px 14px;
+  }
+}
+
+.statDark {
+  background-color: $color-very-dark-blue;
+}
