@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import clsx from 'clsx';
 
 import { ThemeContext } from 'app/contexts';
@@ -14,7 +14,7 @@ interface ButtonProps {
   additionalClass?: string;
 }
 
-export function Button({
+function Button({
   children,
   view,
   onClick,
@@ -40,6 +40,8 @@ export function Button({
     </button>
   );
 }
+
+export default memo(Button);
 
 Button.defaultProps = {
   onClick: () => {},

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import clsx from 'clsx';
 
 import { ThemeContext } from 'app/contexts';
@@ -10,7 +10,7 @@ interface StatProps {
   value: number;
 }
 
-export function Stat({ title, value }: StatProps) {
+function Stat({ title, value }: StatProps) {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -24,3 +24,5 @@ export function Stat({ title, value }: StatProps) {
     </div>
   );
 }
+
+export default memo(Stat);

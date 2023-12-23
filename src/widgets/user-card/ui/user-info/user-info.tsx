@@ -1,4 +1,5 @@
-import { InfoItem, InfoItemProps } from 'shared/ui/info-item/info-item';
+import { memo } from 'react';
+import InfoItem, { InfoItemProps } from 'shared/ui/info-item/info-item';
 import { User } from 'shared/model/user';
 
 import { ReactComponent as LocationIcon } from 'shared/ui/assets/icons/icon-location.svg';
@@ -11,12 +12,7 @@ import s from './user-info.module.scss';
 interface UserInfoProps
   extends Pick<User, 'blog' | 'company' | 'location' | 'twitterUrl'> {}
 
-export function UserInfo({
-  blog,
-  company,
-  location,
-  twitterUrl,
-}: UserInfoProps) {
+function UserInfo({ blog, company, location, twitterUrl }: UserInfoProps) {
   const items: InfoItemProps[] = [
     {
       id: 1,
@@ -50,3 +46,5 @@ export function UserInfo({
     </ul>
   );
 }
+
+export default memo(UserInfo);

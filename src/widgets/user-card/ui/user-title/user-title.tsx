@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import clsx from 'clsx';
 
 import { User } from 'shared/model/user';
@@ -10,7 +10,7 @@ import s from './user-title.module.scss';
 interface UserTitleProps
   extends Pick<User, 'name' | 'login' | 'createdAt' | 'pageUrl'> {}
 
-export function UserTitle({ name, login, createdAt, pageUrl }: UserTitleProps) {
+function UserTitle({ name, login, createdAt, pageUrl }: UserTitleProps) {
   const { theme } = useContext(ThemeContext);
   const joinedDate = localDate.format(new Date(createdAt));
 
@@ -28,3 +28,5 @@ export function UserTitle({ name, login, createdAt, pageUrl }: UserTitleProps) {
     </div>
   );
 }
+
+export default memo(UserTitle);

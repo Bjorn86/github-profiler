@@ -1,7 +1,7 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, memo } from 'react';
 import clsx from 'clsx';
 
-import { Button } from 'shared/ui/button/button';
+import Button from 'shared/ui/button/button';
 import { ThemeContext } from 'app/contexts';
 
 import s from './search.module.scss';
@@ -11,7 +11,7 @@ interface SearchProps {
   onSubmit: (text: string) => void;
 }
 
-export function Search({ isLoading, onSubmit }: SearchProps) {
+export const Search = memo(({ isLoading, onSubmit }: SearchProps) => {
   const [searchValue, setSearchValue] = useState('');
   const { theme } = useContext(ThemeContext);
 
@@ -59,4 +59,4 @@ export function Search({ isLoading, onSubmit }: SearchProps) {
       </form>
     </section>
   );
-}
+});

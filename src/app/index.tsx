@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useCallback } from 'react';
 import clsx from 'clsx';
 
 import { User, GithubUser, GithubError } from 'shared/model/user';
@@ -24,7 +24,7 @@ function App() {
   const [userWasFound, setUserWasFound] = useState(true);
   const { theme } = useContext(ThemeContext);
 
-  const getUser = async (userName: string) => {
+  const getUser = useCallback(async (userName: string) => {
     setIsLoading(true);
     const url = `${API_URL}${userName}`;
     const res = await fetch(url);
@@ -40,7 +40,7 @@ function App() {
       setUserWasFound(false);
       setIsLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     const currentUser = loadDataFromLS<GithubUser>('user');

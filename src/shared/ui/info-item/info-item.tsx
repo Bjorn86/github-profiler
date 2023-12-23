@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, memo } from 'react';
 import clsx from 'clsx';
 
 import { ThemeContext } from 'app/contexts';
@@ -12,7 +12,7 @@ export interface InfoItemProps {
   isLink?: boolean;
 }
 
-export function InfoItem({ id, icon, text, isLink }: InfoItemProps) {
+function InfoItem({ id, icon, text, isLink }: InfoItemProps) {
   const { theme } = useContext(ThemeContext);
   const currentText = text || 'Not available';
   let currentHref = '';
@@ -57,6 +57,8 @@ export function InfoItem({ id, icon, text, isLink }: InfoItemProps) {
     </li>
   );
 }
+
+export default memo(InfoItem);
 
 InfoItem.defaultProps = {
   text: null,
