@@ -1,5 +1,5 @@
 import { InfoItem, InfoItemProps } from 'shared/ui/info-item/info-item';
-import { User } from 'entities/user/model/user';
+import { User } from 'shared/model/user';
 
 import { ReactComponent as LocationIcon } from 'shared/ui/assets/icons/icon-location.svg';
 import { ReactComponent as TwitterIcon } from 'shared/ui/assets/icons/icon-twitter-x.svg';

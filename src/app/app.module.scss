@@ -30,3 +30,13 @@
     gap: 16px;
   }
 }
+
+.notFound {
+  margin: 40px 0 0;
+  @include font-main(24px, $color-dark-grey, 700);
+  text-align: center;
+}
+
+.notFoundDark {
+  color: $color-white;
+}

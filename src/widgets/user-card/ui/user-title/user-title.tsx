@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import clsx from 'clsx';
 
-import { User } from 'entities/user/model/user';
+import { User } from 'shared/model/user';
 import { localDate } from 'shared/lib/utils';
 import { ThemeContext } from 'app/contexts';
 

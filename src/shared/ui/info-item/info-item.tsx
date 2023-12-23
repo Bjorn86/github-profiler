@@ -12,13 +12,16 @@ export interface InfoItemProps {
   isLink?: boolean;
 }
 
-export function InfoItem({ icon, text, isLink }: InfoItemProps) {
+export function InfoItem({ id, icon, text, isLink }: InfoItemProps) {
   const { theme } = useContext(ThemeContext);
   const currentText = text || 'Not available';
   let currentHref = '';
 
-  if (isLink) {
+  if (isLink && id !== 2) {
     currentHref = text && text.startsWith('http') ? text : `https://${text}`;
+  }
+  if (isLink && id === 2) {
+    currentHref = text ? `https://twitter.com/${text}` : '';
   }
 
   return (

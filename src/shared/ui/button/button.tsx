@@ -30,6 +30,7 @@ export function Button({
         [s.filled]: view === 'filled',
         [s.transparent]: view === 'transparent',
         [s.transparentDark]: view === 'transparent' && theme === 'dark',
+        [s.disabled]: isDisabled,
       })}
       type={isSubmit ? 'submit' : 'button'}
       disabled={isDisabled}
