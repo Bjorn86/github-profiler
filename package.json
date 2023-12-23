@@ -1,14 +1,15 @@
 {
-  "name": "cra-ts-fsd-template",
+  "name": "github-profiler",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bjorn86/cra-ts-fsd-template.git"
+    "url": "git+https://github.com/Bjorn86/github-profiler.git"
   },
   "bugs": {
-    "url": "https://github.com/Bjorn86/cra-ts-fsd-template/issues"
+    "url": "https://github.com/Bjorn86/github-profiler/issues"
   },
+  "homepage": "https://bjorn86.github.io/github-profiler/",
   "author": "Danila Legkobytov <legkobytov-danila@yandex.ru>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -35,7 +36,9 @@
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier . --write",
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -104,9 +107,10 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^6.1.1",
+    "husky": "^8.0.0",
     "lint-staged": "^15.2.0",
-    "prettier": "^3.1.1",
-    "husky": "^8.0.0"
+    "prettier": "^3.1.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "npm run lint",
